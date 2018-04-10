@@ -17,13 +17,13 @@ The use of the [yarn](https://yarnpkg.com/) package manager is **strongly** reco
 
 ```bash
 # create a directory of your choice, and copy template using curl
-mkdir new-electron-webpack-project && cd new-electron-webpack-project
-curl -fsSL https://github.com/electron-userland/electron-webpack-quick-start/archive/master.tar.gz | tar -xz --strip-components 1
+# mkdir new-electron-webpack-project && cd new-electron-webpack-project
+# curl -fsSL https://github.com/electron-userland/electron-webpack-quick-start/archive/master.tar.gz | tar -xz --strip-#components 1
 
 # or copy template using git clone
-git clone https://github.com/electron-userland/electron-webpack-quick-start.git
-cd electron-webpack-quick-start
-rm -rf .git
+# git clone https://github.com/electron-userland/electron-webpack-quick-start.git
+# cd electron-webpack-quick-start
+# rm -rf .git
 
 # install dependencies
 yarn

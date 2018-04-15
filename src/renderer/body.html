@@ -1,22 +1,76 @@
 <div>
-	<div class=empty>
-		<p class="title is-5">Welcome to VHS (Video HTTP Streamer)!
-			<p class=subtitle is-5>Get started now and take advantage of the great documentation at hand.
-				<div class=empty-action><button @click="open('https://webpack.electron.build')"class="button is-primary">Documentation</button> <button @click="dockerlist()" class="button is-info">List Docker Containers in Console</button><br><ul class=breadcrumb><li class=breadcrumb-item>electron-webpack v{{ versions.electronWebpack }}</li><li class=breadcrumb-item>electron v{{ versions.electron }}</li></ul></div><p class=footer>This intitial landing page can be easily removed from <code>src/renderer/index.js</code>.</p><div class="file has-name is-boxed is-primary is-centered">
-  <label class="file-label">
-    <input class="file-input" type="file" name="resume">
-    <span class="file-cta">
-      <span class="file-icon">
-        <i class="fas fa-upload"></i>
-      </span>
-      <span class="file-label">
-        Choose a video…
-      </span>
-    </span>
-    <span class="file-name">
-      video-to-convert.mkv
-    </span>
-  </label>
-</div>
-</div>
+	<nav class="navbar is-dark" role="navigation" aria-label="dropdown navigation">
+	  <div class="navbar-menu">
+	    <div class="navbar-end">
+	      <div class="navbar-item has-dropdown is-hoverable">
+	        <a class="navbar-link">
+	          Menu
+	        </a>
+
+	        <div class="navbar-dropdown is-right">
+						<div class="navbar-item"><button @click="open('https://github.com/lucid-lion/lime-lion')"class="button is-primary is-outlined">Documentation</button></div>
+						<div class="navbar-item"><button @click="dockerlist()" class="button is-info is-outlined">List Docker Containers</button></div>
+	          <hr class="navbar-divider">
+	          <div class="navbar-item">
+							<!-- Please insert current version number as button label - Docu @ https://electronjs.org/docs/api/app#appgetversion & https://github.com/SimulatedGREG/electron-vue/issues/375#issuecomment-336816272 -->
+							<button @click="open('https://github.com/lucid-lion/lime-lion/releases')"class="button is-light">Version X.Y</button>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
+	</nav>
+
+	<section class="hero is-primary">
+		<div class="hero-body">
+			<div class="container">
+				<h1 class="title">Lime Lion</h1>
+				<h2 class="subtitle">
+					Lime Lion is your personal assistant to integrate your videos in your own website.
+				</h2>
+			</div>
+		</div>
+	</section><br>
+	<div class="container is-fluid">
+		<div class="file has-name is-boxed is-primary is-centered">
+  		<label class="file-label">
+	  		<input class="file-input" type="file" name="resume">
+	    	<span class="file-cta">
+	     		<span class="file-icon">
+	       		<i class="fas fa-video"></i>
+			    </span>
+			    <span class="file-label">
+			    	Select your video…
+			    </span>
+			  </span>
+			  <span class="file-name">
+					video-to-convert.mkv
+			  </span>
+  		</label>
+		</div>
+	</div>
+	<br>
+	<div class="container is-fluid">
+		<div class="box">
+			$_ please add terminal output here (best scrolling)
+		</div>
+	</div>
+	<footer class="footer">
+		<!-- Main container -->
+		<nav class="level">
+		  <!-- Left side -->
+		  <div class="level-left">
+		    <div class="level-item">
+					<p class="level-item">Please find here the</p>
+					<p class="level-item"><button @click="open('https://github.com/lucid-lion/lime-lion')"class="button is-primary is-outlined is-small">Documentation</button></p>
+		    </div>
+		  </div>
+
+		  <!-- Right side -->
+		  <div class="level-right">
+				<!-- Please insert current version number as button label - Docu @ https://electronjs.org/docs/api/app#appgetversion & https://github.com/SimulatedGREG/electron-vue/issues/375#issuecomment-336816272 -->
+				<p class="level-item"><button @click="open('https://github.com/lucid-lion/lime-lion/releases')"class="button is-light is-small">Version X.Y</button></p>
+		  </div>
+		</nav>
+	</footer>
 </div>

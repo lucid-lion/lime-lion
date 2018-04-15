@@ -4,6 +4,9 @@
 import * as path from 'path'
 var fs = require('fs');
 
+var Docker = require('dockerode');
+var docker = new Docker();
+
 
 fs.readFile(path.join(__dirname, 'style.css'), 'utf-8', (err, data) => {
 	var styles = document.createElement('style')
@@ -32,9 +35,21 @@ function init(){
 			methods:{
 				open(b){
 					require('electron').shell.openExternal(b)
+				},
+				dockerlist(){
+					listdockers();
 				}
 			},
 			template: data
 		}).$mount('#app')
+	});
+}
+
+function listdockers() {
+	console.log('Docker Containers:');
+	docker.listContainers(function (err, containers) {
+		containers.forEach(function(container) {
+			console.log(container);
+		});
 	});
 }

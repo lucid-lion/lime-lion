@@ -1,24 +1,30 @@
 <div>
-	<nav class="navbar is-dark" role="navigation" aria-label="dropdown navigation">
-		<div class="navbar-menu">
-			<div class="navbar-start is-hidden-desktop">
-				<div class="navbar-item has-dropdown is-hoverable">
-	        <a class="navbar-link">
-	          Menu
-	        </a>
+	<nav class="navbar is-dark">
+	  <div class="navbar-brand">
+	    <div class="navbar-item">
+	      <img src="https://raw.githubusercontent.com/lucid-lion/lime-lion/master/lime-lion.png" alt="Lime Lion: your personal assistant to integrate your videos in your own website." width="28" height="28">
+	    </div>
+			<!-- Burger menu layout to be fixed -->
+	    <div class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarDark">
+<!--
+				<span aria-hidden="true"><div class="navbar-item"><button @click="open('https://github.com/lucid-lion/lime-lion')"class="button is-primary is-outlined">Documentation</button></div></span>
+				<span aria-hidden="true"><div class="navbar-item"><button @click="dockerlist()" class="button is-info is-outlined">List Docker Containers</button></div></span>
+				<span aria-hidden="true">
+					<div class="navbar-item">  -->
+					<!-- Please insert current version number as button label - Docu @ https://electronjs.org/docs/api/app#appgetversion & https://github.com/SimulatedGREG/electron-vue/issues/375#issuecomment-336816272 -->
+<!--					<button @click="open('https://github.com/lucid-lion/lime-lion/releases')"class="button is-light">Version X.Y</button>
+					</div>
+				</span>  -->
 
-	        <div class="navbar-dropdown is-left">
-						<div class="navbar-item"><button @click="open('https://github.com/lucid-lion/lime-lion')"class="button is-primary is-outlined">Documentation</button></div>
-						<div class="navbar-item"><button @click="dockerlist()" class="button is-info is-outlined">List Docker Containers</button></div>
-	          <hr class="navbar-divider">
-	          <div class="navbar-item">
-							<!-- Please insert current version number as button label - Docu @ https://electronjs.org/docs/api/app#appgetversion & https://github.com/SimulatedGREG/electron-vue/issues/375#issuecomment-336816272 -->
-							<button @click="open('https://github.com/lucid-lion/lime-lion/releases')"class="button is-light">Version X.Y</button>
-	          </div>
-	        </div>
-	      </div>
-			</div>
-	    <div class="navbar-end is-hidden-touch">
+				<span></span>
+	      <span></span>
+	      <span></span>
+
+	    </div>
+	  </div>
+
+	  <div id="navbarDark" class="navbar-menu">
+			<div class="navbar-end is-hidden-touch">
 	      <div class="navbar-item has-dropdown is-hoverable">
 	        <a class="navbar-link">
 	          Menu
@@ -27,7 +33,6 @@
 	        <div class="navbar-dropdown is-right">
 						<div class="navbar-item is-pulled-right"><button @click="open('https://github.com/lucid-lion/lime-lion')"class="button is-primary is-outlined">Documentation</button></div>
 						<div class="navbar-item is-pulled-right"><button @click="dockerlist()" class="button is-info is-outlined">List Docker Containers</button></div>
-	          <hr class="navbar-divider">
 	          <div class="navbar-item is-pulled-right">
 							<!-- Please insert current version number as button label - Docu @ https://electronjs.org/docs/api/app#appgetversion & https://github.com/SimulatedGREG/electron-vue/issues/375#issuecomment-336816272 -->
 							<button @click="open('https://github.com/lucid-lion/lime-lion/releases')"class="button is-light">Version X.Y</button>
